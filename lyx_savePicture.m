@@ -1,16 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%ä¿å­˜å›¾ç‰‡
+%%æ·‡æ¿†ç“¨é¥å‰§å¢–
 function m_savePicture(titleName,xlabelName,ylabelName,path)
 set(gcf,'position',[0,0,1920,1080]);
-set(gca,'FontSize',20);%ÏÈĞŞ¸ÄËùÓĞ×ÖÌå´óĞ¡£¬°üÀ¨¿Ì¶È×ÖÌå
+set(gca,'FontSize',20);%å…ˆä¿®æ”¹æ‰€æœ‰å­—ä½“å¤§å°ï¼ŒåŒ…æ‹¬åˆ»åº¦å­—ä½“
 title(titleName,'fontsize',36,'fontname','Microsoft YaHei UI');
 xlabel(xlabelName,'fontsize',36,'fontname','Microsoft YaHei UI');
 ylabel(ylabelName,'fontsize',36,'fontname','Microsoft YaHei UI');
-%set(pic,'linewidth',3.5);ĞŞ¸ÄÏßÌõ´ÖÏ¸
+%set(pic,'linewidth',3.5);ä¿®æ”¹çº¿æ¡ç²—ç»†
 %set(gca,'xtick',1:21);
-%±ä³É°Ù·ÖÖÆ
+%å˜æˆç™¾åˆ†åˆ¶
 %set(gca,'yticklabel',labels_modif);
-%È¥³ı°×±ß
+%å»é™¤ç™½è¾¹
 ax = gca;
 outerpos = ax.OuterPosition;
 ti = ax.TightInset;
@@ -19,13 +19,13 @@ bottom = outerpos(2) + ti(2);
 ax_width = outerpos(3) - ti(1) - ti(3);
 ax_height = outerpos(4) - ti(2) - ti(4);
 ax.Position = [left bottom ax_width ax_height];
-%±£´æ
-path=[BackPath(3),'\02Êı¾İ\matlabÊä³ö\',path];
+%ä¿å­˜
+path=[BackPath(3),'\02æ•°æ®\matlabè¾“å‡º\',path];
 saveas(gcf,strcat(path,'\',titleName,'.png'));
 saveas(gcf,strcat(path,'\',titleName,'.fig'));
 close all
 
-%Â·¾¶»ØÍË
+%è·¯å¾„å›é€€
 function [str_temp]=BackPath(BackNum)
 BackNum=BackNum+1;
 str_temp = mfilename('fullpath');

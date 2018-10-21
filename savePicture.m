@@ -1,9 +1,9 @@
 %% savePicture: 保存图片到当前文件路径
 function savePicture(titleName,xlabelName,ylabelName)
 
-	path = '/Users/shengliyi/Documents/MATLAB/比赛Matlab/11B/图片';
+	path = '/Users/shengliyi/Library/Mobile Documents/com~apple~CloudDocs/Data/03Code/MATLAB/MATLAB/课程设计/pic';
 
-	set(gcf,'position',[0,0,1080,720]);
+set(gcf,'position',[0,0,1080,720]);
 	set(gca,'FontSize',20);%先修改所有字体大小，包括刻度字体
     if nargin >= 1
         title(titleName,'fontsize',36,'fontname','Microsoft YaHei UI');
